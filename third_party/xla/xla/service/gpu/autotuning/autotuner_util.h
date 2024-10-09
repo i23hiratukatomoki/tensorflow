@@ -57,6 +57,10 @@ struct DevicelessConfig {
   se::DeviceDescription device_description;
 };
 
+// Status payload key to put errors at when autotune cache hits are required.
+// The value is implementation-defined.
+extern const absl::string_view kAutotuneCacheRequiredErrorPayloadKey;
+
 class AutotuneCacheKey {
  public:
   AutotuneCacheKey(const se::DeviceDescription& device_description,
